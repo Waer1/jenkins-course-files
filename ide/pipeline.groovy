@@ -4,9 +4,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/g0t4/jgsu-spring-petclinic.git', branch: 'main'
+                git url: 'https://github.com/Waer1/jgsu-spring-petclinic-jenkins', branch: 'main'
             }            
         }
+        
         stage('Build') {
             steps {
                 sh './mvnw clean package'
